@@ -434,7 +434,7 @@ $('#openBtn').addEventListener('click',function(){
   if(gate.classList.contains('leaving'))return;
   gate.classList.add('leaving');
   playSong();
-  setTimeout(function(){gate.classList.add('open')},1400);                                      // pause, then doors start
+  setTimeout(function(){gate.classList.add('open')},900);                                      // pause, then doors start
   setTimeout(function(){document.body.classList.remove('lock');hero.classList.add('go')},3200); // names appear
   setTimeout(function(){gate.classList.add('gone')},4700);                                      // doors fully open
 });
