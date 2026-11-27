@@ -175,38 +175,39 @@ input:focus,select:focus,textarea:focus{border-color:var(--green)}
 #burst{position:fixed;top:0;left:50%;transform:translateX(-50%);pointer-events:none;z-index:40}
 @media (prefers-reduced-motion:reduce){.gbtn,.h6{animation:none!important}}
 
-/* ---------- OCEANIC LUXE #2D415A + WARM CLAY #C56F4E, light shades ---------- */
-:root{--ocean:#2d415a;--ocean-mist:#dce3ec;--clay:#c56f4e;--clay-text:#96492e;--clay-soft:#eecabb;--cream-clay:#fbf4ee;--beige:#eee0d5}
-html:has(body:not(.lock)),body:not(.lock){background:var(--ocean-mist)}
-.dark{padding-bottom:0;border-top-color:var(--clay);background:linear-gradient(#d6dfe9,#e6ebf1)}
-.dark::before{opacity:.07;background:repeating-radial-gradient(circle at 18px 18px,#2d415a 0 1.2px,transparent 2px 26px)}
-.dark .sec:last-child{margin:20px -8% 0;padding:34px 8% 40px;background:var(--beige);border-top:1px solid rgba(197,111,78,.35)}
-.dark .sec+.sec:before{color:var(--clay)}
-.dark .sm,.dark label{color:var(--clay-text)}
-.dark h2,.dark .thanks h3{color:var(--ocean);text-shadow:none}
-.dark p,.dark .chk label{color:var(--ocean)}
-.dark .ev{background:var(--cream-clay);border-color:rgba(197,111,78,.35);box-shadow:0 12px 26px rgba(45,65,90,.13),inset 0 1px 0 #fff}
-.dark .ev .k{background:#f4ddd2;border-color:#e6bba8;color:var(--clay-text)}
-.dark .ev h3{color:var(--ocean)}
-.dark .ev .dt{color:var(--clay-text)}
-.dark .ev .tm,.dark .ev .pl{color:#3d516a}
-.dark .map{border-color:#c3cfdc;background:#d5dee8}
-.dark .map .lbl{background:rgba(251,244,238,.94);color:var(--ocean)}
-.dark .pr{border-color:rgba(197,111,78,.85)}
-.dark .btn{border-color:#a9b7c8;background:#e4eaf1;color:var(--ocean)}
-.dark .btn.f,.dark .send{background:var(--clay-soft);border:1.5px solid #dda691;color:var(--ocean)}
-.dark .gl{color:var(--clay-text);opacity:1}
-.dark .send{box-shadow:0 5px 14px rgba(197,111,78,.2)}
-.dark input[type=text],.dark input[type=tel],.dark select,.dark textarea,.dark .opt span{background:#fffaf6;border-color:#dcc3b4;color:var(--ocean)}
-.dark input:focus,.dark select:focus,.dark textarea:focus{border-color:var(--clay);box-shadow:0 0 0 3px rgba(197,111,78,.2)}
-.dark .opt input:checked+span{background:#f4d9cd;border-color:var(--clay);color:var(--ocean)}
-.dark .chk input{accent-color:var(--clay)}
-.foot{background:var(--ocean-mist);border-top-color:var(--clay);color:var(--ocean)}
-.foot .nm{color:var(--ocean)}
-.credit:before{background:linear-gradient(90deg,transparent,var(--clay),transparent)}
-.credit:after{color:var(--clay);background:var(--ocean-mist)}
-.credit small{color:var(--clay-text);opacity:1}
-.credit b{background-image:linear-gradient(100deg,#a9583a 20%,#d58a6b 45%,#2d415a 55%,#a9583a 80%)}
+/* ---------- CELEBRATIONS, RSVP, FOOTER: same cream page as above ---------- */
+html:has(body:not(.lock)),body:not(.lock){background:#f4e9d3}
+.ev{background:linear-gradient(160deg,#fffdf7,#f8ecd2);border-color:rgba(197,154,60,.4);border-radius:28px;padding:22px 12px 18px;box-shadow:0 14px 30px rgba(107,26,34,.1),inset 0 1px 0 #fff}
+.map{background:#f2e3cc;border:1px solid rgba(197,154,60,.45)}
+.map .lbl{background:rgba(255,250,240,.94);color:#6b1a22}
+.pr{border-color:rgba(197,111,78,.85)}
+.btn{border-color:#d9b98a;background:#fffaf0;color:#6b1a22}
+.btn.f,.send{background:#eecabb;border:1.5px solid #dda691;color:#6b1a22}
+.send{box-shadow:0 5px 14px rgba(197,111,78,.2)}
+.gl{color:#96492e;opacity:1}
+#rsvpSec h2{font-size:26px;line-height:1.3;margin-bottom:6px}
+input:focus{border-color:#c56f4e;box-shadow:0 0 0 3px rgba(197,111,78,.2)}
+input[type=text]:focus{border-color:#c56f4e}
+.opts{margin-top:16px}
+.opt span{height:100%;display:flex;align-items:center;justify-content:center;color:#6b1a22}
+.opt input{cursor:pointer;margin:0}
+.opt input:checked+span{background:#f4d9cd;color:#6b1a22;border-color:#c56f4e}
+.opt input:focus-visible+span{outline:2px solid #6b1a22;outline-offset:2px}
+.thanks h3{overflow-wrap:anywhere}
+.foot{background:#f4e9d3;color:var(--ink)}
+.foot .nm{color:#6b1a22}
+.credit:after{background:#f4e9d3}
+.credit small{color:#96492e;opacity:1}
+.credit b{background-image:linear-gradient(100deg,#8a5a1c 20%,#c59a3c 45%,#6b1a22 55%,#8a5a1c 80%)}
+.err{color:#a3261f;font-size:16px;font-weight:600;margin-top:8px;text-align:center}
+.pop{position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(40,22,10,.55)}
+.pop[hidden],.err[hidden]{display:none}
+.pop .box{width:100%;max-width:340px;text-align:center;padding:28px 22px 24px;border-radius:26px;background:linear-gradient(160deg,#fffdf7,#f8ecd2);border:1.5px solid #c59a3c;box-shadow:0 20px 50px rgba(0,0,0,.35);animation:popin .35s ease}
+.pop .orn{color:#c59a3c;letter-spacing:.3em;font-size:14px;margin-bottom:12px}
+.pop h3{font-family:'Playfair Display',serif;font-weight:400;font-size:26px;line-height:1.25;color:#6b1a22;margin-bottom:8px;overflow-wrap:anywhere}
+.pop p{font-size:19px;line-height:1.45;margin-bottom:18px}
+.pop .btn{padding:10px 34px}
+@keyframes popin{from{opacity:0;transform:scale(.9)}}
 </style>
 </head>
 <body class="lock">
@@ -274,8 +275,7 @@ html:has(body:not(.lock)),body:not(.lock){background:var(--ocean-mist)}
     </div>
   </section>
 
-</main>
-<div class="dark">
+
   <section class="sec">
     <div class="sm">Join the Celebrations</div>
     <h2>Celebrations</h2>
@@ -302,41 +302,32 @@ html:has(body:not(.lock)),body:not(.lock){background:var(--ocean-mist)}
   </section>
 
   <!-- RSVP -->
-  <section class="sec">
-    <div class="sm">RSVP</div>
-    <h2>Will You Join Us?</h2>
-    <p>Kindly let us know, so we can welcome you with open arms.</p>
+  <section class="sec" id="rsvpSec">
+    <h2>Kindly let us know<br>your presence</h2>
     <form id="rsvp">
       <label for="nm">Your name</label>
       <input type="text" id="nm" required autocomplete="name">
-      <label for="ph">Phone (optional)</label>
-      <input type="tel" id="ph" autocomplete="tel">
-      <label>Will you attend?</label>
-      <div class="opts">
-        <div class="opt"><input type="radio" name="att" id="y" value="Joyfully attending" checked><span for="y">Joyfully attending</span></div>
-        <div class="opt"><input type="radio" name="att" id="n" value="Unable to attend"><span>Unable to attend</span></div>
+      <div class="opts" role="radiogroup" aria-label="Your reply">
+        <div class="opt"><input type="radio" name="att" id="y" value="Joyfully accept" aria-label="Joyfully accept" checked><span>Joyfully Accept</span></div>
+        <div class="opt"><input type="radio" name="att" id="n" value="Regretfully decline" aria-label="Regretfully decline"><span>Regretfully Decline</span></div>
       </div>
-      <div id="more">
-        <label for="gc">Number of guests</label>
-        <select id="gc"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option></select>
-        <label>Which events?</label>
-        <div class="chk"><label><input type="checkbox" id="e1" checked> Reception</label><label><input type="checkbox" id="e2" checked> Wedding</label></div>
-      </div>
-      <label for="ms">Blessings / message (optional)</label>
-      <textarea id="ms" rows="3"></textarea>
-      <button class="send" type="submit">Send RSVP</button>
+      <p class="err" id="nmErr" role="alert" hidden>Please enter your name.</p>
+      <button class="send" type="button" id="sendBtn">Send RSVP</button>
     </form>
-    <div class="thanks" id="thanks"><h3>Thank you!</h3><p>Your response has been noted. We can’t wait to celebrate with you.</p></div>
+    <div class="thanks" id="thanks"><h3 id="sName"></h3><p id="sMsg"></p></div>
   </section>
-</div>
+</main>
 
 <footer class="foot">
   <span style="display:block;font-family:'Great Vibes',cursive;font-size:38px;margin-bottom:4px">Thank you</span>
   Your presence will make our day complete
   <div class="nm" style="margin-top:12px">Manoj &amp; Lavanya Sri</div>
   <small>With love, the families of Murugesh – Vijayalakshmi &amp; Govindaraj – Lakshmi</small>
-  <div class="credit"><small>Designed by</small><b>Thugira E-Designs</b></div>
+  <div class="credit"><small>Designed by</small><b>Thugira e-Designs</b></div>
 </footer>
+</div>
+<div class="pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="tName" hidden>
+  <div class="box"><div class="orn">✦  ❖  ✦</div><h3 id="tName"></h3><p id="tMsg"></p><button type="button" class="btn f" id="popClose">Close</button></div>
 </div>
 <audio id="song" src="song.mp3" loop preload="auto"></audio>
 <button id="music" aria-label="Music on/off">♪</button>
@@ -345,8 +336,7 @@ html:has(body:not(.lock)),body:not(.lock){background:var(--ocean-mist)}
 <script>
 /* ======= EDIT THESE ======= */
 var CONFIG = {
-  whatsapp: '',   // couple's WhatsApp number with country code, e.g. '919876543210' (RSVP opens WhatsApp with the reply pre-filled)
-  endpoint: ''    // optional: Formspree / Google Apps Script URL to also collect RSVPs as data
+  endpoint: ''    // optional: Google Apps Script / Formspree URL to collect RSVPs
 };
 var PHOTOS = {
   groom: [],      // e.g. ['photos/manoj1.jpg','photos/manoj2.jpg']
@@ -432,8 +422,8 @@ function slider(id,list,hint){var el=$(id);
 slider('#gF',PHOTOS.groom,'❖');slider('#bF',PHOTOS.bride,'❖');
 
 /* map cards */
-var MAPSVG='<svg class="bg" viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice"><rect width="300" height="160" fill="#d5dee8"/><g fill="rgba(255,255,255,.5)"><rect x="12" y="10" width="70" height="44" rx="8"/><rect x="214" y="14" width="74" height="36" rx="8"/><rect x="20" y="104" width="62" height="44" rx="8"/><rect x="218" y="100" width="70" height="48" rx="8"/><rect x="118" y="20" width="60" height="26" rx="8"/></g><path d="M-10 128 C70 100 140 146 310 106" stroke="rgba(45,65,90,.2)" stroke-width="16" fill="none"/><g stroke="rgba(255,255,255,.95)" stroke-width="7" fill="none" stroke-linecap="round"><path d="M-5 62 H305"/><path d="M100 -5 V165"/><path d="M200 -5 L240 165"/></g><path class="route" d="M30 150 L100 62 L205 62 L226 120" stroke="rgba(197,111,78,.9)" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>';
-document.querySelectorAll('.map').forEach(function(m){m.innerHTML=MAPSVG+'<div class="pinw"><i class="pr"></i><i class="pr p2"></i><svg class="pinsvg" viewBox="0 0 32 42"><path d="M16 1C8 1 2 7 2 15c0 10 14 26 14 26s14-16 14-26C30 7 24 1 16 1z" fill="#c56f4e" stroke="#fbf1ea" stroke-width="1.5"/><circle cx="16" cy="15" r="5.5" fill="#fbf1ea"/></svg></div><div class="lbl">Open in Google Maps ↗</div>'});
+var MAPSVG='<svg class="bg" viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice"><rect width="300" height="160" fill="#f2e3cc"/><g fill="rgba(255,255,255,.55)"><rect x="12" y="10" width="70" height="44" rx="8"/><rect x="214" y="14" width="74" height="36" rx="8"/><rect x="20" y="104" width="62" height="44" rx="8"/><rect x="218" y="100" width="70" height="48" rx="8"/><rect x="118" y="20" width="60" height="26" rx="8"/></g><path d="M-10 128 C70 100 140 146 310 106" stroke="rgba(95,110,42,.2)" stroke-width="16" fill="none"/><g stroke="rgba(255,255,255,.95)" stroke-width="7" fill="none" stroke-linecap="round"><path d="M-5 62 H305"/><path d="M100 -5 V165"/><path d="M200 -5 L240 165"/></g><path class="route" d="M30 150 L100 62 L205 62 L226 120" stroke="rgba(197,111,78,.9)" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>';
+document.querySelectorAll('.map').forEach(function(m){m.innerHTML=MAPSVG+'<div class="pinw"><i class="pr"></i><i class="pr p2"></i><svg class="pinsvg" viewBox="0 0 32 42"><path d="M16 1C8 1 2 7 2 15c0 10 14 26 14 26s14-16 14-26C30 7 24 1 16 1z" fill="#c56f4e" stroke="#fff6ec" stroke-width="1.5"/><circle cx="16" cy="15" r="5.5" fill="#fff6ec"/></svg></div><div class="lbl">Open in Google Maps ↗</div>'});
 
 /* calendar */
 var EV={rec:{t:'Wedding Reception – Manoj & Lavanya Sri',s:'20270217T123000Z',e:'20270217T153000Z',l:'Malli Resort, Kondarasampalayam, Udumalai Road, Dharapuram',m:'https://maps.app.goo.gl/LWWwTcvPVNpxcMQ37?g_st=ic'},
@@ -445,14 +435,24 @@ document.querySelectorAll('[data-ev]').forEach(function(b){b.addEventListener('c
   var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));a.download=b.dataset.ev+'-invitation.ics';document.body.appendChild(a);a.click();a.remove()})});
 
 /* RSVP */
-document.querySelectorAll('input[name=att]').forEach(function(r){r.addEventListener('change',function(){$('#more').style.display=$('#y').checked?'block':'none'})});
-$('#rsvp').addEventListener('submit',function(e){e.preventDefault();
-  var yes=$('#y').checked,ev=[];if($('#e1').checked)ev.push('Reception (17 Feb)');if($('#e2').checked)ev.push('Wedding (18 Feb)');
-  var data={name:$('#nm').value,phone:$('#ph').value,response:yes?'Joyfully attending':'Unable to attend',guests:yes?$('#gc').value:'0',events:yes?ev.join(', '):'',message:$('#ms').value};
-  if(CONFIG.endpoint){try{fetch(CONFIG.endpoint,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(data)})}catch(x){}}
-  var txt='RSVP – Manoj & Lavanya Sri wedding\nName: '+data.name+(data.phone?'\nPhone: '+data.phone:'')+'\nResponse: '+data.response+(yes?'\nGuests: '+data.guests+'\nEvents: '+data.events:'')+(data.message?'\nMessage: '+data.message:'');
-  if(CONFIG.whatsapp||!CONFIG.endpoint)window.open('https://wa.me/'+CONFIG.whatsapp+'?text='+encodeURIComponent(txt),'_blank');
-  $('#rsvp').style.display='none';$('#thanks').style.display='block';$('#thanks').scrollIntoView({behavior:'smooth',block:'center'})});
+function sendRsvp(){
+  var name=$('#nm').value.trim();
+  if(!name){$('#nmErr').hidden=false;$('#nm').focus();return}
+  var yes=$('#y').checked;
+  if(CONFIG.endpoint){try{fetch(CONFIG.endpoint,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:name,response:yes?'Joyfully accept':'Regretfully decline'})})}catch(x){}}
+  var title='Thank you, '+name+'!',msg=yes?'We are delighted and can\u2019t wait to celebrate with you.':'We will miss you, and we look forward to your blessings.';
+  $('#tName').textContent=$('#sName').textContent=title;
+  $('#tMsg').textContent=$('#sMsg').textContent=msg;
+  $('#rsvpSec h2').style.display='none';$('#rsvp').style.display='none';$('#thanks').style.display='block';
+  $('#nm').blur();$('#pop').hidden=false;$('#popClose').focus({preventScroll:true})}
+$('#sendBtn').addEventListener('click',sendRsvp);
+$('#rsvp').addEventListener('submit',function(e){e.preventDefault()});
+$('#nm').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();sendRsvp()}});
+$('#nm').addEventListener('input',function(){$('#nmErr').hidden=true});
+function closePop(){$('#pop').hidden=true}
+$('#popClose').addEventListener('click',closePop);
+$('#pop').addEventListener('click',function(e){if(e.target===this)closePop()});
+addEventListener('keydown',function(e){if(e.key==='Escape')closePop()});
 </script>
 </body>
 </html>
