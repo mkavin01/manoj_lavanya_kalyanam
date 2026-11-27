@@ -11,7 +11,7 @@
 <style>
 :root{--green:#0f4a3a;--gold:#c59a3c;--gold2:#e9cf8a;--maroon:#6b1a22;--cream:#f7efe0;--ink:#1f4d3a}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html,body{background:#0b2c22}
+html,body{background:#0b2c22}aa
 body{font-family:'Cormorant Garamond','Noto Serif Tamil',serif;color:var(--ink);overflow-x:hidden}
 body.lock{overflow:hidden;height:100dvh}
 #app{max-width:480px;margin:0 auto;position:relative;background:var(--cream);overflow:hidden}
@@ -276,7 +276,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--green)}
 </footer>
 </div>
 <audio id="song" src="song.mp3" loop preload="auto"></audio>
-<button id="music" aria-label="Music on/off">♪</button>  
+<button id="music" aria-label="Music on/off">♪</button>
 <canvas id="burst"></canvas>
 
 <script>
@@ -298,17 +298,15 @@ function playSong(){
   var p=song.play();
   if(p&&p.then){p.then(function(){mbtn.classList.add('show','on')}).catch(function(){mbtn.classList.add('show')})}
 }
+song.addEventListener('error',function(){mbtn.classList.remove('show','on')});
 mbtn.addEventListener('click',function(){
   if(song.paused){song.play();mbtn.classList.add('on')}else{song.pause();mbtn.classList.remove('on')}
-});  
+});
 
 /* door */
 $('#openBtn').addEventListener('click',function(){
   gate.classList.add('open');
-  $('#openBtn').addEventListener('click',function(){
-  gate.classList.add('open');
-  playSong();            // <-- add this line
-  setTimeout(function(){ ...
+  playSong();
   setTimeout(function(){document.body.classList.remove('lock');hero.classList.add('go')},900);
   setTimeout(function(){gate.classList.add('gone')},2100);
 });
@@ -395,4 +393,3 @@ $('#rsvp').addEventListener('submit',function(e){e.preventDefault();
 </script>
 </body>
 </html>
-
